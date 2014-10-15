@@ -1,8 +1,9 @@
+#Les asignamos un valor para que no de error la declaración de funciones
 nombre = "tres"
 contraseña = "ocho"
-print(nombre, contraseña)
+#Declaramos las variables
 def validarnombre():
-    global nombre
+    global nombre #Esto evita un error cuando intentamos modificar una variable dentro de la función
     while len(nombre)>12 or len(nombre)<6 or nombre.isalnum()==False:
         nombre = input("Introduce tu nombre de ususario: ")
         if len(nombre)>12:
@@ -12,9 +13,8 @@ def validarnombre():
         if nombre.isalnum()==False:
             print("Recuerda que el nombre no debe contener caracteres no alfanuméricos")
     return True
-
 def validarcontraseña():
-    global contraseña
+    global contraseña #Esto evita un error cuando intentamos modificar una variable dentro de la función
     while len(contraseña)<8 or contraseña.isalnum()==True or contraseña.islower()==True or contraseña.isupper()==True:
         contraseña = input("Introduce tu contraseña: ")
         if len(contraseña)<8:
@@ -28,10 +28,10 @@ def validarcontraseña():
         if chr(32) in contraseña:
             print("Recuerda que los espacios no están permitidos")
     return True
-
+#Le pedimos al usuario que introduzca los datos
 while validarnombre()!=True:
-    nombre = input("Introduce tu nombre de ususario: ")
-print("El nombre está bien escrito")
+    validarnombre()
+print("El usuario está bien escrito")
 while validarcontraseña()!=True:
-    contraseña = input("Introduce tu contraseña: ")
+    validarcontraseña()
 print("La contraseña es completamente segura")
