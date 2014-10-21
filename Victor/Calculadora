@@ -1,0 +1,59 @@
+def button01_function():
+    print("El resultado es")
+    print('%s' % svalue.get())
+    variable = svalue.get()
+    print()
+
+def addition():
+    w.insert(0,"+")
+    w.pack()
+
+def sustract():
+    w.insert(0,"-")
+    w.pack()
+
+def multiply():
+    w.insert(0,"*")
+    w.pack()
+
+def divide():
+    w.insert(0,"/")
+    w.pack()
+
+def uno():
+    w.insert(0,"1")
+    w.pack()
+
+
+from tkinter import *
+
+window = Tk(className="Calculadora")
+window.geometry("200x250")
+
+foo = Label(window,text="Calculadora en Python")
+foo.pack()
+
+svalue = StringVar()
+w = Entry(window,textvariable=svalue)
+w.pack()
+
+foo = Button(window,text="=",command= button01_function)
+foo.pack()
+
+foo = Button(window,text="+",command= addition)
+foo.pack(padx = 10,side=LEFT)
+
+foo = Button(window,text="-",command= sustract)
+foo.pack(padx = 10,side=LEFT)
+
+foo = Button(window,text="*",command= multiply)
+foo.pack(padx = 10,side=LEFT)
+
+foo = Button(window,text="/",command= divide)
+foo.pack(padx = 10,side=LEFT)
+
+foo = Button(window,text="1",command= uno)
+foo.pack(padx = 10,side=LEFT)
+
+window.mainloop()
+
