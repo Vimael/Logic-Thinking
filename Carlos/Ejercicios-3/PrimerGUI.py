@@ -24,10 +24,23 @@ def result():
     for i in range (0,len(variable)):
         if not variable[k].isdigit():
             print("no es un numero")
-            
+            posicionSigno = k
+            print("el signo esta en la posicion ", k)
+            #ahora para saber cuando acaba el primer numero basta con k-1
+            #y el segundo empieza en k+1
         else:
-            print("1")
+            print("Sí es un número")
         k = k+1
+        #ahora miramos que signo es
+        if variable[k] == '+' : 
+            print("es un mas")
+        else if variable[k] == '-':
+            print("es un menos")
+        else if variable[k] == '*':
+            print("es un asterisco")
+        else if variable[k] == '/':
+            print("es una barra")
+        #esto en c es mas facil con un switch, lo añoro :(
     
 
 from tkinter import *
