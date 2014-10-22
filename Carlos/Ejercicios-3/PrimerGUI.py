@@ -60,6 +60,9 @@ foo.pack(padx=5,side=LEFT)
 foo = Button(window,text="=",command= result)
 foo.pack(padx=5,side=LEFT)
 
+boton = Button(window, text="Minimizar", command=window.iconify)
+boton.pack()
+
 window.mainloop()
 
 #     len(svalue)
