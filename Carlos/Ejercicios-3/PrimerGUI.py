@@ -1,3 +1,15 @@
+def button01_function():
+    print("Has escrito: ")
+    print('%s' % svalue.get())
+
+def addition():
+    w.insert(0,"+")
+    w.pack()
+
+def sustract():
+    w.insert(0,"-")
+    w.pack()
+
 def multiply():
     w.insert(0,"*")
     w.pack()
