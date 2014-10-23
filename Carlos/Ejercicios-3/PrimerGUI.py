@@ -3,7 +3,8 @@ def button01_function():
     print('%s' % svalue.get())
 
 def addition():
-    w.insert(0,"+")
+    posicion = len(svalue)    #TypeError: object of type 'StringVar' has no len()
+    w.insert(posicion,"+")
     w.pack()
 
 def sustract():
@@ -26,21 +27,31 @@ def result():
             print("no es un numero")
             posicionSigno = k
             print("el signo esta en la posicion ", k)
-            #ahora para saber cuando acaba el primer numero basta con k-1
-            #y el segundo empieza en k+1
+            #ahora para saber cuando acaba el primer numero basta con k-1 y el segundo empieza en k+1
         else:
             print("Sí es un número")
         k = k+1
-        #ahora miramos que signo es
+
+        #FALTA: cuando reconozca que no es un número, salir del bucle (con un while)
+        
+        #ahora miramos que signo es y operamos
         if variable[k] == '+' : 
             print("es un mas")
-        else if variable[k] == '-':
+             resultado = variable[0,k-1]+variable[k+1,len(variable)]
+             print("%s"  % resultado)
+        elif variable[k] == '-':
             print("es un menos")
-        else if variable[k] == '*':
+            resultado = variable[0,k-1]-variable[k+1,len(variable)]
+            print("%s"  % resultado)
+        elif variable[k] == '*':
             print("es un asterisco")
-        else if variable[k] == '/':
+            resultado = variable[0,k-1]*variable[k+1,len(variable)]
+            print("%s"  % resultado)
+        elif variable[k] == '/':
             print("es una barra")
-        #esto en c es mas facil con un switch, lo añoro :(
+            resultado = variable[0,k-1]/variable[k+1,len(variable)]
+            print("%s"  % resultado)
+        
     
 
 from tkinter import *
@@ -77,5 +88,3 @@ boton = Button(window, text="Minimizar", command=window.iconify)
 boton.pack()
 
 window.mainloop()
-
-#     len(svalue)
