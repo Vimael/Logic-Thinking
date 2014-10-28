@@ -18,44 +18,70 @@ def verificar():
     global variable9
 
     if variable9.get() == 1:
-        print("GAAAAAAY")
         webbrowser.open(urlgay)
         
+    var1 = variable1
+    var2 = variable2
+    var3 = variable3
+    var4 = variable4
+    var5 = variable5
+    var6 = variable6
+    var7 = variable7
+    var8 = variable8        
     
-    if variable1.get() == 1:
-        variable1 = random.randint(150, 200)
+    if variable1 == True:
+        var1 = random.randint(150, 200)
         
-    if variable2.get() == 1:
-        variable2 = random.randint(100, 175)
+    if var2 == 1:
+        var1 = random.randint(100, 175)
         
-    if variable3.get() == 1:
-        variable3 = random.randint(50, 125)
+    if var3 == 1:
+        var3 = random.randint(50, 125)
         
-    if variable4.get() == 1:
-        variable4 = random.randint(0, 75)
+    if var4 == 1:
+        var4 = random.randint(0, 75)
         
-    if variable5.get() == 1:
-        variable5 = random.randint(-50, 25)
+    if var5 == 1:
+        var5 = random.randint(-50, 25)
 
-    if variable6.get() == 1:
-        variable6 = random.randint(-100, -25)
+    if var6 == 1:
+        var6 = random.randint(-100, -25)
 
-    if variable7.get() == 1:
-        variable7 = random.randint(-150, -75)
+    if var7 == 1:
+        var7 = random.randint(-150, -75)
 
-    if variable8.get() == 1:
-        variable8 = random.randint(-200, -125)
+    if var8 == 1:
+        var8 = random.randint(-200, -125)
 
-    resultado = variable1+variable2+variable3+variable4+variable5+variable6+variable7+variable8
 
+    print(var1)
+    #resultado = var1 + var2 + var3 + var4 + var5 + var6 + var7 + var8
+    #print(resultado)
+
+########################################################################################################################
     
-        
-
-
 ventana = Tk()
+   
+########################################################################################################################        
+texto0 = Label(ventana, text=" _____                                         _            _                        ")
+texto1 = Label(ventana, text="|  __ \                                       | |          (_)                       ")
+texto2 = Label(ventana, text="| |__) |___  ___ ___  _ __ ___   ___ _ __   __| | __ _  ___ _  ___  _ __   ___  ___  ")
+texto3 = Label(ventana, text="|  _  // _ \/ __/ _ \| '_ ` _ \ / _ \ '_ \ / _` |/ _` |/ __| |/ _ \| '_ \ / _ \/ __| ")
+texto4 = Label(ventana, text="| | \ \  __/ (_| (_) | | | | | |  __/ | | | (_| | (_| | (__| | (_) | | | |  __/\__ \ ")
+texto5 = Label(ventana, text="|_|  \_\___|\___\___/|_| |_| |_|\___|_| |_|\__,_|\__,_|\___|_|\___/|_| |_|\___||___/ ")
+
+                                                                                     
+texto0.grid(row=10, column=0)
+texto1.grid(row=11, column=0)
+texto2.grid(row=12, column=0)
+texto3.grid(row=13, column=0)
+texto4.grid(row=14, column=0)
+texto5.grid(row=15, column=0)
+########################################################################################################################
 
 bg = PhotoImage(file="play.png")
 
+########################################################################################################################
 variable1 = IntVar()
 variable2 = IntVar()
 variable3 = IntVar()
@@ -85,8 +111,10 @@ check6.grid(row=5, column=0)
 check7.grid(row=6, column=0)
 check8.grid(row=7, column=0)
 check9.grid(row=8, column=0)
+########################################################################################################################
 
 cm = Button(ventana, image=bg, text="Verificar", command=verificar, width=32, height=32)
 cm.grid(row=9, column=0)
 
+########################################################################################################################
 ventana.mainloop()
