@@ -3,18 +3,52 @@ import os
 
 ventana = Tk()
 
+################################################################################
+
+def uno():
+    open('Chris Isaak - Baby did a bad bad thing.mp3')
+def dos():
+    open('Chuck Berry - You Never Can Tell  (Pulp Fiction).mp3')
+def tres():
+    open('Jet - Get What You Need.mp3')
+def cuatro():
+    open('Kula_shaker-fool_that_i_am.mp3')
+def cinco():
+    open('Neil Young - After the Gold Rush - 07 - Don\'t Let It Bring You Down.mp3')
+def seis():
+    open('Nick Drake - Pink Moon.mp3')
+def siete():
+    open('Rolling Stones - Don\'t Stop.mp3')
+def ocho():
+    open('Simon & Garfunkel - Mrs Robinson.mp3')
+def nueve():
+    open('Stealers Wheel - Stuck In The Middle With You (Reservoir Dogs).mp3')
+def diez():
+    open('The Blasters - Dark Night  (From Dusk Till Dawn).mp3')
+
+
+
+
+
 def Atras():
     return
+
+
 def Bucle():
     return
+
+
 def Aleatorio():
     return
+
+
 def Adelante():
     return
 
 
 
-###############################################################################
+
+################################################################################
 
 bg0 = PhotoImage(file="atras.png")
 bg1 = PhotoImage(file="bucle.png")
@@ -35,11 +69,16 @@ cm.grid(row=1, column=3)
 
 ################################################################################
 
+
 bg4 = PhotoImage(file="fav.png")
 
 cm = Button(ventana, image=bg4, text="fav", width=32, height=32)
-cm.grid(row=2, column=2)
+cm.grid(row=4, column=1)
 
+bg5 = PhotoImage(file="start.png")
+
+cm = Button(ventana, image=bg5, text="start", width=32, height=32)
+cm.grid(row=4, column=2)
 
 
 
