@@ -3,7 +3,7 @@ nombre = "tres"
 contraseña = "ocho"
 #Declaramos las variables
 def validarnombre():
-    global nombre #Esto evita un error cuando intentamos modificar una variable dentro de la función
+    global nombre #Esto evita un error cuando intentamos modificar una variable. dentro de la función
     while len(nombre)>12 or len(nombre)<6 or nombre.isalnum()==False:
         nombre = input("Introduce tu nombre de ususario: ")
         if len(nombre)>12:
